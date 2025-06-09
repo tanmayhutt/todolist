@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'todolist.settings')
 
 application = get_wsgi_application()
+
+# Vercel looks for 'app' or 'handler' by default.
+# Alias 'application' to 'app' for Vercel compatibility.
+app = application
