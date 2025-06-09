@@ -1,5 +1,4 @@
 from todolist.wsgi import application
-from vercel_wsgi import handle_request
+from vercel_python import VercelHandler
 
-def handler(request, context):
-    return handle_request(request, application)
+handler = VercelHandler(application)
